@@ -34,8 +34,15 @@ pnpm order:submit <type> <price> <quantity> <userId>
 
 #### Examples
 
+Place a buy order
+
 ```sh
 pnpm order:submit buy 100 10 2a2c91fb-7256-40fe-8e84-cf5fa3bf7e44
+```
+
+Place a sell order
+
+```sh
 pnpm order:submit sell 100 10 ec31ee39-40bf-41d5-9a2d-98bedd9b03bd
 ```
 
