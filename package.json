@@ -1,0 +1,21 @@
+{
+  "name": "simple-distributed-exchange",
+  "version": "1.0.0",
+  "description": "A simplified distributed exchange",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "node server/index.js",
+    "start:client": "node client/index.js",
+    "start:grenache": "grape -b 127.0.0.1 --dp 20001 --dc 32 --aph 30001 --bn \"127.0.0.1:20002,127.0.0.1:20003\""
+  },
+  "author": "Sehal Sein",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "grenache-grape": "^0.9.12",
+    "grenache-nodejs-link": "^1.0.0",
+    "grenache-nodejs-ws": "^0.7.10",
+    "uuid": "^9.0.1"
+  }
+}
