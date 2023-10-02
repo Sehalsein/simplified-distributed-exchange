@@ -45,18 +45,15 @@ class OrderService {
   }
 
   async syncOrders() {
-    const [localOrders, distributedOrders] = await Promise.all([
-      await db.order.findMany(),
-      await this.request(this.name, {
-        action: "getOrders",
-      }),
-    ]);
+    const distributedOrders = await this.request(this.name, {
+      action: "getOrders",
+    });
 
-    const result = mergeOrders(localOrders, distributedOrders);
-    await db.order.set(result);
+    // const result = mergeOrders(localOrders, distributedOrders);
+    await db.order.set(distributedOrders);
     return {
       data: {
-        count: result.length,
+        count: distributedOrders.length,
       },
       message: "Orders synced successfully",
     };

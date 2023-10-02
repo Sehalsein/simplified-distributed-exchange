@@ -6,7 +6,14 @@ const [orderType, price, quantity, user] = process.argv.slice(2);
 
 async function run() {
   console.log("submitting order");
+
+  if (!orderType || !price || !quantity || !user) {
+    console.log("Invalid arguments");
+    return;
+  }
+
   const orderService = new OrderService(peer);
+
   await orderService
     .submitOrder(
       {

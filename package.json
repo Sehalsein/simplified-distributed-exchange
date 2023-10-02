@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:server": "node server/index.js",
     "start:client": "node client/index.js",
-    "start:grenache": "grape -b 127.0.0.1 --dp 20001 --dc 32 --aph 30001 --bn \"127.0.0.1:20002,127.0.0.1:20003\""
+    "start:grenache": "grape -b 127.0.0.1 --dp 20001 --dc 32 --aph 30001 --bn \"127.0.0.1:20002,127.0.0.1:20003\"",
+    "order:submit": "node client/debug/submit-order.js",
+    "order:show": "node client/debug/show-order.js",
+    "trade:show": "node client/debug/show-trade.js"
   },
   "author": "Sehal Sein",
   "license": "ISC",
