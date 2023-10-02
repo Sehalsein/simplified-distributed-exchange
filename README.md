@@ -1,5 +1,7 @@
 # A simplified distrubted exchange
 
+## [Challenge](Nodejs-Blockchain.md)
+
 ## Get started
 
 **Note**: using `pnpm`
